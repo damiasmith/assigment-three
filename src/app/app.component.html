@@ -1,3 +1,14 @@
 <h1>
   {{title}}
 </h1>
+
+<button class="btn btn-primary" (click)="onToggle()">Display Details</button>
+<p *ngIf="showDetails">Jacob is the best!</p>
+
+<div 
+  *ngFor="let logItem of details"
+  [ngClass]="{'background-color': logItem >= 5}"
+  [ngClass]="{'white-text': logItem >= 5}" 
+>{{logItem}}
+</div>
+
